@@ -1,0 +1,82 @@
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#container {
+	background: #50d846;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+}
+
+/*classes*/
+.contentContainer {
+	width: 100%;
+	background: #4ea59c;
+	padding-left: 3em;
+	padding-right: 3em;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+/*text*/
+#topNavHeader a {
+	display: block;
+
+}
+
+#topNavHeader li {
+	float: left;
+	display: inline-block;
+	/*width: 60px;*/
+	padding: 0 10px;
+}
+
+#bottomNavHeader a {
+	display: block;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000000;
+
+}
+
+#bottomNavHeader li {
+	float: left;
+	display: inline-block;
+	padding: 0 10px;	
+}
+
+/*divs*/
+
+
+#header {
+	background: #a53b43;
+	width: 100%;
+}
+
+#logo {
+	background: url('../img/logo.svg') no-repeat;
+	float: left;
+	width: 10em;
+	height: 10em;
+}
+
+#navigation {
+	float: right;
+}
+
+
+#topNavHeader{
+	float: right;
+}
+
+#bottomNavHeader {
+	float: right: 
+
+}
