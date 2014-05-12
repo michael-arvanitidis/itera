@@ -42,6 +42,7 @@ nav .headerTopNav a {
 	display: block;
 	font-family: 'Titillium Web', sans-serif;
 	font-weight: 300;
+	text-decoration: none;
 }
 
 nav .headerTopNav li {
@@ -68,10 +69,14 @@ nav .headerLowerNav {
 nav .headerLowerNav a {
 	display: block;
 	text-transform: uppercase;
-	text-decoration: underline;
+	text-decoration: none;
 	color: black;
 	font-family: 'Titillium Web', sans-serif;
 	font-weight: 600;
+}
+
+nav .headerLowerNav a:hover {
+	text-decoration: underline;
 }
 
 nav .headerLowerNav li {
@@ -95,6 +100,8 @@ nav .headerLowerNav li.lastLi{
 
 .center {
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #section1content {
@@ -124,12 +131,30 @@ nav .headerLowerNav li.lastLi{
 	width: 100%;
 }
 
-.centerQuote p, h1 {
+.centerQuote p, h1, h2 {
 	font-family: 'Titillium Web', sans-serif;
 	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
-	width: 600px;
+	
+}
+
+.centerQuote h1 {
+	padding-top: 3em;
+	font-weight: 700;
+	color: #fff;
+	font-size: 3em; 
+}
+
+
+.centerQuote h2 {
+	font-weight: 200;
+	font-size: 1em;
+	text-align: center;
+	vertical-align: middle;
+	max-width: 15em;
+	border: 1px solid #a4a4a4;
+	margin-top: 3em;
 }
 
 
@@ -139,13 +164,6 @@ nav .headerLowerNav li.lastLi{
 	font-size: 1em;
 	width: 500px;
 	padding-bottom: 2em;
-}
-
-.centerQuote h1 {
-	padding-top: 3em;
-	font-weight: 700;
-	color: #fff;
-	font-size: 3em; 
 }
 
 
@@ -196,4 +214,55 @@ nav .headerLowerNav li.lastLi{
 }
 
 
+#arrowNext img{
+	width: 2em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+#socialMediaContainer {
+	display: inline-block;
+	width: 100%;
+}
+
+
+.socMedLinkImg {
+	width: 2.5em;
+	padding-right: 2em;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.socMedLinkImg a, a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+}
+
+#socMedLinkContainer {
+	border-top: 1px solid #a4a4a4;
+	border-bottom: 1px solid #a4a4a4;
+}
+
+#followUs {
+	max-width: 20em;
+	display: inline-block;
+}
+
+#followUs h3, p {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+#followUs h3 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+#followUs p {
+	font-weight: 200;
+
+}
+
+.socialMediaArticles {
+	float: right;
+	display: inline-block;
+}
 
