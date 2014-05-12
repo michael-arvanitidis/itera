@@ -26,7 +26,8 @@ body {
 nav {
 	display: inline;
 	float: right;
-	width: 80%;
+	/*width: 80%;*/
+	width: 60%;
 	margin-right: 0;
 	height: inherit;
 }
