@@ -228,7 +228,7 @@ nav .headerLowerNav li.lastLi{
 
 .socMedLinkImg {
 	width: 2.5em;
-	padding-right: 2em;
+	padding-right: 1.8em;
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
@@ -243,7 +243,7 @@ nav .headerLowerNav li.lastLi{
 }
 
 #followUs {
-	max-width: 20em;
+	max-width: 18em;
 	display: inline-block;
 }
 
@@ -263,6 +263,23 @@ nav .headerLowerNav li.lastLi{
 
 .socialMediaArticles {
 	float: right;
-	display: inline-block;
+	width: 70%;
+	padding: 0 0; 
 }
 
+.socialMediaArticles li {
+	display: inline-block;
+	width: 30%;
+	border: 1px solid #a4a4a4;
+	margin-right: 1em;
+	margin-bottom: 1em; 
+	float: left;
+}
+
+.socMedArticle img {
+	max-width: 100%;
+}
+
+.socMedArticle div {
+	border-top: 1px solid #a4a4a4;
+}
