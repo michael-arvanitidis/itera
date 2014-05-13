@@ -2,7 +2,34 @@
 <html>
 <head>
 	<link rel="stylesheet" href="./css/style1.css">
-	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	
+	
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+      function initialize() {
+        var map_canvas = document.getElementById('map_canvas');
+        var iteraLatLong = new google.maps.LatLng(59.9502433, 10.7342351,18);
+        var map_options = {
+          // center: new google.maps.LatLng(59.9483333, 10.7291255),
+          center: iteraLatLong,
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          scrollwheel: false
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+
+        var marker = new google.maps.Marker({
+        	position: iteraLatLong,
+        	map: map,
+        	icon: './img/mapMarker.png',
+        	title: 'Itera'
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 
 
@@ -10,6 +37,7 @@
 
 </head>
 <body>
+
 	<div id="container">
 		
 		<!-- <div class="wrapper"> -->
@@ -27,8 +55,6 @@
 					<div class="wrapper">
 					<!-- wraps around all content (keeps from reaching edges)
 					//contain on itera.no -->
-
-
 
 						<div id="logo">
 							<img src="./img/logo.svg" alt="iteras logo">
@@ -56,9 +82,7 @@
 								<li class="lastLi"><a href="">søk</a></li>
 							</ul>
 						</nav>
-					
-					</div>
-
+					</div>			
 
 				</header>
 			
@@ -79,7 +103,7 @@
 							<!-- <a class="nextSlide" href=""><img src="./img/arrowNext.png" alt=""></a> -->
 
 							</div>
-							<!-- end section1 -->
+							<!-- end centerQuote -->
 
 						</div>
 						<!-- end center -->
@@ -187,12 +211,39 @@
 		<!-- </div> -->
 		<!-- end articleSection -->
 		
-	
+		
+<!-- 
 		<div id="blackDivider">
 		<img src="./img/blackDivider.png" alt="">
-		</div>
+		</div> -->
 
 		<!-- FLYTTES INN I EN CENTER-DIV? -->
+
+
+		<div id="blackOverlay">
+					<!-- red cover over video -->
+					<div class="wrapper">
+						
+						<div class="center">
+							<div class="centerQuote">
+								<img src="./img/forYou.png" alt="">
+
+							<!-- <a class="nextSlide" href=""><img src="./img/arrowNext.png" alt=""></a> -->
+
+							</div>
+							<!-- end centerQuote -->
+
+						</div>
+						<!-- end center -->
+
+					</div>
+					<!-- end wrapper -->
+
+				</div>
+				<!-- end overlay -->
+		
+
+
 		
 		<div class="wrapper">
 			
@@ -230,7 +281,7 @@
 						<ul class="socialMediaArticles">
 							<li class="socMedArticle"><img src="./img/socMed1.png" alt="">
 									<p>										
-										31.10.2013 Seminar 
+										<span class="greyDate">31.10.2013 </span>Seminar 
 										<a href="" class="socMedLink">@itera_makeadifference</a>
 									</p>
 									
@@ -244,7 +295,7 @@
 								
 							<li class="socMedArticle">
 								<p>
-									Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter</a><a href="" class="twitterLink">#makeadifference</a>
+									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter </a><a href="" class="twitterLink">#makeadifference</a>
 								</p>
 								
 								<div>
@@ -256,7 +307,7 @@
 							
 							<li class="socMedArticle">
 								<p>
-									Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter</a><a href="" class="twitterLink">#makeadifference</a>
+									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter </a><a href="" class="twitterLink">#makeadifference</a>
 								</p>
 
 								<div>
@@ -268,7 +319,7 @@
 							
 							<li class="socMedArticle">
 								<p>
-									Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter</a><a href="" class="twitterLink">#makeadifference</a>
+									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter </a><a href="" class="twitterLink">#makeadifference</a>
 								</p>
 
 								<div>
@@ -280,7 +331,7 @@
 							
 							<li class="socMedArticle">
 								<p>
-									Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter</a><a href="" class="twitterLink">#makeadifference</a>
+									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter </a><a href="" class="twitterLink">#makeadifference</a>
 								</p>
 
 								<div>
@@ -292,7 +343,7 @@
 							
 							<li class="socMedArticle">
 								<p>
-									Vi har nytt format på vårt frokostseminar og kjører 5 parallelle lyntaler med sirkulering! <a href="" class="linkedLink">#makeadifference</a>
+									<span class="greyDate">31.10.2013 </span>Vi har nytt format på vårt frokostseminar og kjører 5 parallelle lyntaler med sirkulering! <a href="" class="linkedLink">#makeadifference</a>
 								</p>
 
 								<div>
@@ -304,7 +355,7 @@
 							
 							<li class="socMedArticle">
 								<p>
-									Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter</a><a href="" class="twitterLink">#makeadifference</a>
+									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter</a> <a href="" class="twitterLink">#makeadifference</a>
 								</p>
 
 								<div>
@@ -316,7 +367,8 @@
 
 							<li class="socMedArticle"><img src="./img/socMed2.png" alt="">
 									<p>
-										
+										<span class="greyDate">31.10.2013 </span>Welcome to 
+										<a href="" class="facebookLink">@itera_makeadifference</a>, Tetiana and Yaroslava
 									</p>
 
 									<div>
@@ -339,40 +391,92 @@
 								</div>
 							</li>
 						</ul>
-
-
-
-
-						<!-- <div id="socialMediaArticles">
-							
-
-
-							<article class="socMedArticle">
-								<img src="" alt="">
-								<h4></h4>
-
-							</article>
-							<article class="socMedArticle"></article>
-							<article class="socMedArticle"></article>
-							<article class="socMedArticle"></article>
-							<article class="socMedArticle"></article>
-							<article class="socMedArticle"></article>
-							<article class="socMedArticle"></article>
-							<article class="socMedArticle"></article>
-							<article class="socMedArticle"></article>
-
-						</div> -->
 					
 					</div>
 				<!-- end center -->
 
 			</div>
 			<!-- end wrapper -->
+
+
+
 		</div>
 		<!-- end socialMediaContainer -->
+		
+		
+			<div id="map_canvas"></div>	
+			
+			<div id="locationsContainer">
+			
+				<div class="wrapper">
 
+					<!-- <div class="center"> -->
 
+						<ul class="locations">
+							<li>
+								<h4>sweden</h4>
+								<p class="twoLocationsLeft">Itera Consulting AB<br>
+								Walingatan 20<br>
+								SE 111 24 Stockholm<br>
+								08 694 90 15<br>
+								<a href="" class="mapLink">Map</a>
+								</p>
 
+								<p class="twoLocationsRight">Itera Consulting AB<br>
+								Walingatan 20<br>
+								SE 111 24 Stockholm<br>
+								08 694 90 15<br>
+								<a href="" class="mapLink">Map</a>
+								</p>
+							</li>
+							
+							<li>
+								<h4>norway</h4>
+								<p>
+									Itera ASA<br>
+									Sognsveien 77A-B<br>
+									Pb. 3834 Ullevål Stadio,<br>
+									0805 Oslo<br>
+									<a href="" class="mapLink">Map</a>
+								</p>
+							</li>
+
+							<li>
+								<h4>denmark</h4>
+								<p>
+									Rentemestervej 2A<br>
+									2400 København NV<br>
+									+45 70 13 61 00<br>
+									<a href="" class="mapLink">Map</a>
+								</p>
+							</li>
+
+							<li>
+								<h4>ukraine</h4>
+								<p class="twoLocationsLeft">
+								Zhylansk str. 75<br>
+								Kiev 01032<br>
+								+38 044 499 32 01<br>
+								<a href="" class="mapLink">Map</a>
+								<a href="" class="mapLink">itera.uk</a>
+								</p>
+
+								<p class="twoLocationsRight">
+								Zhylansk str. 75<br>
+								Kiev 01032<br>
+								+38 044 499 32 01<br>
+								<a href="" class="mapLink">Map</a>
+								<a href="" class="mapLink">itera.uk</a>
+								</p>
+							</li>
+						</ul>
+					
+					<!-- </div> -->
+					<!-- end center -->
+				
+				</div>
+				<!-- end wrapper -->
+		</div>
 	</div>
 	<!-- end container -->
 

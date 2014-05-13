@@ -100,6 +100,14 @@ nav .headerLowerNav li.lastLi{
 	height: 426px;
 }
 
+#blackOverlay {
+	background-color: #404040;
+	/*opacity: 0.5;*/
+	width: 100%;
+	height: 426px;
+}
+
+
 .center {
 	text-align: center;
 	margin-left: auto;
@@ -285,3 +293,67 @@ nav .headerLowerNav li.lastLi{
 .socMedArticle div {
 	border-top: 1px solid #a4a4a4;
 }
+
+.socMedArticle p, a {
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 600;
+	font-size: 0.9em;
+	padding: ;
+}
+
+.socMedArticle a {
+	color: #d20a11;
+}
+.greyDate {
+	color: #939393;
+	font-weight: 400;
+}
+
+#map_canvas {
+	width: 100%;
+	height: 500px;
+}
+
+.locations {
+	margin-top: 0;
+	line-height: 1em;
+}
+
+.locations li{
+	display: inline-block;
+	padding: 0 15px;
+	border-right: 1px solid #000;
+	vertical-align: top;
+}
+
+.locations h4, p {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.locations h4 {
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.locations p {
+	font-weight: 200;
+	text-align: center;
+}
+
+.mapLink a, a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+	color: #d20a11;
+}
+
+
+.twoLocationsLeft {
+	float: left;
+	margin-right: 2em;
+}
+
+.twoLocationsRight {
+	float: right;
+	margin-left: 2em;
+}
+
