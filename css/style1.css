@@ -7,11 +7,9 @@ body {
 }
 
 .wrapper {
-	/*background-color: #fff; /*lilla 622ea3*/
-	padding-left: 3em;
-	padding-right: 3em;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 3em;
+	margin-right: 3em;
+	position: relative;
 }
 
 /*header*/
@@ -24,18 +22,20 @@ body {
 }
 /*navigation*/
 nav {
-	display: inline;
-	float: right;
-	/*width: 80%;*/
 	width: 60%;
-	margin-right: 0;
-	height: inherit;
+	height: 100%;
+	margin-right: 0;	
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
 }
 
 /*top navigation*/
 nav .headerTopNav {
-	/*float: right;*/
 	text-align: right;
+	position: absolute;
+	right: 0;
 }
 
 nav .headerTopNav a {
@@ -59,11 +59,13 @@ nav .headerTopNav li.lang{
 
 /*lower navigation*/
 nav .headerLowerNav {
-	/*float: right;*/
 	text-align: right;
-	vertical-align: bottom;
+	vertical-align: bottom;		
 	margin-bottom: 0;
 	line-height: 1em;
+	position: absolute;
+	bottom: 1px;
+	right: 0;
 }
 
 nav .headerLowerNav a {
