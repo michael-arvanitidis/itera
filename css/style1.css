@@ -315,15 +315,39 @@ nav .headerLowerNav li.lastLi{
 }
 
 .locations {
-	margin-top: 0;
+	list-style-type: none; 
+	margin: 1em 0;
+	padding: 0;
 	line-height: 1em;
 }
 
-.locations li{
-	display: inline-block;
-	padding: 0 15px;
-	border-right: 1px solid #000;
-	vertical-align: top;
+.locations:before,
+.locations:after {
+	content: " ";
+	display: table;
+}
+
+.locations:after {
+	clear: both;
+}
+
+.locations li {
+	box-sizing: border-box;
+	float: left;
+	padding: 1em;
+}
+
+.locations .single {
+	width: 16.66%;
+}
+
+.locations .double {
+	width: 33.33%;
+}
+
+.locations .double p {
+	float: left;
+	width: 50%;
 }
 
 .locations h4, p {
@@ -331,12 +355,14 @@ nav .headerLowerNav li.lastLi{
 }
 
 .locations h4 {
+	margin: 0 0 1em 0;
 	font-weight: 700;
 	text-transform: uppercase;
 	text-align: center;
 }
 
 .locations p {
+	margin: 0;
 	font-weight: 200;
 	text-align: center;
 }
@@ -345,15 +371,3 @@ nav .headerLowerNav li.lastLi{
 	text-decoration: none;
 	color: #d20a11;
 }
-
-
-.twoLocationsLeft {
-	float: left;
-	margin-right: 2em;
-}
-
-.twoLocationsRight {
-	float: right;
-	margin-left: 2em;
-}
-
