@@ -29,6 +29,17 @@
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
+	<script>
+
+			var clicked=false;
+
+			function showUpside () {
+				var upside=document.getElementById('upside');
+				upside.style.display = "inline-block";
+				upside.style.border = "1px solid black";
+				upside.style.textAlign = "center";
+			}
+	</script>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 
@@ -39,13 +50,18 @@
 <body>
 
 	<div id="container">
-		
-		<!-- <div class="wrapper"> -->
-		<!-- wraps around all content (keeps from reaching edges)
-		//contain on itera.no -->
 
 			<div id="upside">
 				<!-- nothing yet -->
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, laudantium eius blanditiis! Earum, dicta, esse quod illo voluptas assumenda doloremque odio provident rem mollitia sed reprehenderit. Explicabo laboriosam illo iusto.
+				<br>
+				<br>
+				HER VILLE OPPSIDEN VÆRT
+				<br>
+				refresh for å fjerne
+				<br>
+				<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque atque obcaecati unde eaque aperiam! Quasi, quidem, ab, dolores numquam aliquam totam asperiores iure perferendis architecto obcaecati quod distinctio ipsam dignissimos.
 			</div>
 			
 				
@@ -53,24 +69,24 @@
 				<header id="header">
 
 					<div class="wrapper">
-					<!-- wraps around all content (keeps from reaching edges)
-					//contain on itera.no -->
+					<!-- wraps around all content (keeps from reaching edges) -->
 
 						<div id="logo">
 							<img src="./img/logo.svg" alt="iteras logo">
 						</div>
 						
-						<!-- <nav id="navigation"> -->
+						
 						<nav role="navigation">
 							<ul class="headerTopNav">
-								<li><a href="#upside">Oppsiden</a></li>
+								<li><a href="#upside" onclick="showUpside()">Oppsiden</a></li>
 								<li><a href="">Investor relations</a></li>
 								<li><a href="">Karriere</a></li>
 								<li><a href="">Webshop</a></li>
 								<li class="lang"><a href="">en</a></li>
 								<li class="lang"><a href="">no</a></li>
-									<!-- flere på itera.no men ikke på designtegningen fra Kristofer -->
-								</li>
+							</ul>
+							<ul class="hiddenTopNav">
+								<li><a href="#upside" onclick="showUpside()">Oppsiden</a></li>
 							</ul>
 
 							<ul class="headerLowerNav">
@@ -79,15 +95,16 @@
 								<li><a href="">metodikk</a></li>
 								<li><a href="">om oss</a></li>
 								<li><a href="">kontakt</a></li>
-								<li class="lastLi"><a href="">søk</a></li>
+								<li class="lastLi"><img src="./img/search.png" alt=""></li>
+							</ul>
+							<ul class="smallMenuNav">
+								<li><img src="./img/search.png" alt=""></li>
+								<li><img src="./img/menu.png" alt=""></li>
 							</ul>
 						</nav>
 					</div>			
 
 				</header>
-			
-			<!-- </div> -->
-		<!--  end wrapper-->
 
 
 				<div id="videoOverlay">
@@ -99,8 +116,6 @@
 								<h1>
 								Vi er et kommunikasjons- og teknologiselskap
 								</h1>
-
-							<!-- <a class="nextSlide" href=""><img src="./img/arrowNext.png" alt=""></a> -->
 
 							</div>
 							<!-- end centerQuote -->
@@ -125,7 +140,6 @@
 						Vi løser utfordringene annerledes fordi vi samler tverrfaglig styrke for å få dypere innsikt og se nye muligheter.
 						</p>
 					</div>
-					<!-- end centerTextSection2 -->
 
 					<div id="currentArticlesContainer">
 						
@@ -143,7 +157,7 @@
 								<p>
 									Itera is a leading Scandinavian consultancy company that designs, builds and manages innovative digital solutions and services.
 								</p>
-							</img>
+							<!-- </img> -->
 						</article>
 						
 						<article class="currentArticle">
@@ -159,7 +173,7 @@
 								<p>
 									Itera is a leading Scandinavian consultancy company that designs, builds and manages innovative digital solutions and services.
 								</p>
-							</img>
+							<!-- </img> -->
 						</article>
 						
 						<article class="currentArticle">
@@ -172,7 +186,7 @@
 								<p>
 									Itera is a leading Scandinavian consultancy company that designs, builds and manages innovative digital solutions and services.
 								</p>
-							</img>
+							<!-- </img> -->
 						</article>
 						
 						<article class="currentArticle">
@@ -185,7 +199,7 @@
 								<p>
 									Itera is a leading Scandinavian consultancy company that designs, builds and manages innovative digital solutions and services.
 								</p>
-							</img>
+							<!-- </img> -->
 						</article>
 
 
@@ -208,27 +222,15 @@
 			</div>
 			<!-- end wrapper -->
 
-		<!-- </div> -->
-		<!-- end articleSection -->
-		
-		
-<!-- 
-		<div id="blackDivider">
-		<img src="./img/blackDivider.png" alt="">
-		</div> -->
-
-		<!-- FLYTTES INN I EN CENTER-DIV? -->
-
 
 		<div id="blackOverlay">
-					<!-- red cover over video -->
+					
 					<div class="wrapper">
 						
 						<div class="center">
 							<div class="centerQuote">
 								<img src="./img/forYou.png" alt="">
 
-							<!-- <a class="nextSlide" href=""><img src="./img/arrowNext.png" alt=""></a> -->
 
 							</div>
 							<!-- end centerQuote -->
@@ -264,7 +266,7 @@
 									<img src="./img/facebookLogo.png" alt="" class="socMedLinkImg">
 								</a>
 									
-								<a href="twitter.com/iteraASA" alt="">
+								<a href="twitter.com/iteraASA">
 									<img src="./img/twitterLogo.png" alt="" class="socMedLinkImg">
 								</a>
 								
@@ -285,12 +287,6 @@
 										<a href="" class="socMedLink">@itera_makeadifference</a>
 									</p>
 									
-									<div>
-										<img src="" alt="" class="instagramHeart">
-										<p class="instagramLikes"></p>
-										<img src="" alt="" class="instagramLogo">
-									</div>
-								</img>
 							</li>
 								
 							<li class="socMedArticle">
@@ -298,11 +294,6 @@
 									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter </a><a href="" class="twitterLink">#makeadifference</a>
 								</p>
 								
-								<div>
-									<img src="" alt="" class="instagramHeart">
-									<p class="instagramLikes"></p>
-									<img src="" alt="" class="instagramLogo">
-								</div>
 							</li>
 							
 							<li class="socMedArticle">
@@ -310,11 +301,6 @@
 									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter </a><a href="" class="twitterLink">#makeadifference</a>
 								</p>
 
-								<div>
-									<img src="" alt="" class="instagramHeart">
-									<p class="instagramLikes"></p>
-									<img src="" alt="" class="instagramLogo">
-								</div>
 							</li>
 							
 							<li class="socMedArticle">
@@ -322,11 +308,6 @@
 									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter </a><a href="" class="twitterLink">#makeadifference</a>
 								</p>
 
-								<div>
-									<img src="" alt="" class="instagramHeart">
-									<p class="instagramLikes"></p>
-									<img src="" alt="" class="instagramLogo">
-								</div>
 							</li>
 							
 							<li class="socMedArticle">
@@ -334,11 +315,6 @@
 									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter </a><a href="" class="twitterLink">#makeadifference</a>
 								</p>
 
-								<div>
-									<img src="" alt="" class="instagramHeart">
-									<p class="instagramLikes"></p>
-									<img src="" alt="" class="instagramLogo">		
-								</div>
 							</li>
 							
 							<li class="socMedArticle">
@@ -346,11 +322,7 @@
 									<span class="greyDate">31.10.2013 </span>Vi har nytt format på vårt frokostseminar og kjører 5 parallelle lyntaler med sirkulering! <a href="" class="linkedLink">#makeadifference</a>
 								</p>
 
-								<div>
-									<img src="" alt="" class="instagramHeart">
-									<p class="instagramLikes"></p>
-									<img src="" alt="" class="instagramLogo">	
-								</div>
+
 							</li>
 							
 							<li class="socMedArticle">
@@ -358,11 +330,6 @@
 									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter</a> <a href="" class="twitterLink">#makeadifference</a>
 								</p>
 
-								<div>
-									<img src="" alt="" class="instagramHeart">
-									<p class="instagramLikes"></p>
-									<img src="" alt="" class="instagramLogo">
-								</div>
 							</li>
 
 							<li class="socMedArticle"><img src="./img/socMed2.png" alt="">
@@ -370,26 +337,8 @@
 										<span class="greyDate">31.10.2013 </span>Welcome to 
 										<a href="" class="facebookLink">@itera_makeadifference</a>, Tetiana and Yaroslava
 									</p>
-
-									<div>
-										<img src="" alt="" class="instagramHeart">
-										<p class="instagramLikes"></p>
-										<img src="" alt="" class="instagramLogo">
-									</div>
-								</img>
 							</li>
 							
-							<li class="socMedArticle">
-									<p>
-										
-									</p>
-
-								<div>
-									<img src="" alt="" class="instagramHeart">
-									<p class="instagramLikes"></p>
-									<img src="" alt="" class="instagramLogo">
-								</div>
-							</li>
 						</ul>
 					
 					</div>
