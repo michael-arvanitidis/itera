@@ -2,6 +2,46 @@
 <html>
 <head>
 	<link rel="stylesheet" href="./css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	
+	
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+      function initialize() {
+        var map_canvas = document.getElementById('map_canvas');
+        var iteraLatLong = new google.maps.LatLng(59.9502433, 10.7342351,18);
+        var map_options = {
+          // center: new google.maps.LatLng(59.9483333, 10.7291255),
+          center: iteraLatLong,
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          scrollwheel: false
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+
+        var marker = new google.maps.Marker({
+        	position: iteraLatLong,
+        	map: map,
+        	icon: './img/mapMarker.png',
+        	title: 'Itera'
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+	<script>
+
+			var clicked=false;
+
+			function showUpside () {
+				var upside=document.getElementById('upside');
+				upside.style.display = "inline-block";
+				upside.style.border = "2px solid #004080";
+				upside.style.textAlign = "center";
+				upside.style.width = "100%";
+			}
+	</script>
+
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 
 
@@ -9,91 +49,385 @@
 
 </head>
 <body>
-	<div id="container">
-		
-		
-		<div id="wrapper">
-			
-			<!-- <div id="upside">
-				for ting som skal inn på toppen 
-			</div> -->
 
-			<header id="header">
+	<div id="container">
+
+			<div id="upside">				
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, laudantium eius blanditiis! Earum, dicta, esse quod illo voluptas assumenda doloremque odio provident rem mollitia sed reprehenderit. Explicabo laboriosam illo iusto.
+				<br>
+				<br>
+				HER VILLE OPPSIDEN VÆRT
+				<br>
+				refresh for å fjerne
+				<br>
+				<br>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque atque obcaecati unde eaque aperiam! Quasi, quidem, ab, dolores numquam aliquam totam asperiores iure perferendis architecto obcaecati quod distinctio ipsam dignissimos.
+			</div>
+			
 				
-				<!-- brukes i alle diver for å få innholdet likt i forhold til container -->
-				<div class="contentContainer">
-					
-					<div class="headerContent">
+				<!-- header -->
+				<header id="header">
+
+					<div class="wrapper">
+					<!-- wraps around all content (keeps from reaching edges) -->
 
 						<div id="logo">
-							
+							<img src="./img/logo.svg" alt="iteras logo">
 						</div>
 						
-						<!-- øverste navigering -->
-						<nav id="navigation">
-							<ul id="topNavHeader">
-								<li><a href="">Upside</a></li>
+						
+						<nav role="navigation">
+							<ul class="headerTopNav">
+								<li><a href="#upside" onclick="showUpside()">Oppsiden</a></li>
 								<li><a href="">Investor relations</a></li>
 								<li><a href="">Karriere</a></li>
 								<li><a href="">Webshop</a></li>
+								<li class="lang"><a href="">en</a></li>
+								<li class="lang"><a href="">no</a></li>
+							</ul>
+							<ul class="hiddenTopNav">
+								<li><a href="#upside" onclick="showUpside()">Oppsiden</a></li>
 							</ul>
 
-							<!-- nederste navigering -->
-							<ul id="bottomNavHeader">
+							<ul class="headerLowerNav">
 								<li><a href="">tjenester</a></li>
 								<li><a href="">referanser</a></li>
 								<li><a href="">metodikk</a></li>
 								<li><a href="">om oss</a></li>
 								<li><a href="">kontakt</a></li>
+								<li class="lastLi"><img src="./img/search.png" alt=""></li>
+							</ul>
+							<ul class="smallMenuNav">
+								<li><img src="./img/search.png" alt=""></li>
+								<li><img src="./img/menu.png" alt=""></li>
 							</ul>
 						</nav>
-					</div>
+					</div>			
 
-				</div>
+				</header>
 
-			</header>
 
-			<div id="videoOverlay">
-				<div class="contentContainer">
-					
-				</div>
-			</div>
-
-			<div id="section1">
-				<div class="contentContainer">
-					
-				</div>
-			</div>
-
-			<div id="section2">
-				
-				<div class="contentContainer">
-					
-					<div id="section2Quote">
+				<div id="videoOverlay">
+					<!-- red cover over video -->
+					<div class="wrapper">
 						
+						<div class="center">
+							<div class="centerQuote">
+								<h1>
+								Vi er et kommunikasjons- og teknologiselskap
+								</h1>
+
+							</div>
+							<!-- end centerQuote -->
+
+						</div>
+						<!-- end center -->
+
+					</div>
+					<!-- end wrapper -->
+
+				</div>
+				<!-- end overlay -->
+		
+		<div id="articleSection">
+			
+			<div class="wrapper">
+
+				<div class="center">
+					
+					<div class="centerQuote">
+						<p>
+						Vi løser utfordringene annerledes fordi vi samler tverrfaglig styrke for å få dypere innsikt og se nye muligheter.
+						</p>
+					</div>
+
+					<div id="currentArticlesContainer">
+						
+						
+						<article class="currentArticle">
+							<img src="./img/article1.png" alt="">
+								<h2>
+								referanse
+								</h2>
+
+								<h1>	
+								Seminar								
+								</h1>
+								<hr class="articleHR">
+								<p>
+									Itera is a leading Scandinavian consultancy company that designs, builds and manages innovative digital solutions and services.
+								</p>
+							<!-- </img> -->
+						</article>
+						
+						<article class="currentArticle">
+							<img src="./img/article2.png" alt="">
+								<h2>
+								referanse
+								</h2>
+								
+								<h1>	
+								Centrica								
+								</h1>
+								<hr class="articleHR">
+								<p>
+									Itera is a leading Scandinavian consultancy company that designs, builds and manages innovative digital solutions and services.
+								</p>
+							<!-- </img> -->
+						</article>
+						
+						<article class="currentArticle">
+							<img src="./img/article3.png" alt="">
+								<h2>referanse</h2>
+								<h1>
+								Elkjøp tok utfordringen med Itera
+								</h1>
+								<hr class="articleHR">
+								<p>
+									Itera is a leading Scandinavian consultancy company that designs, builds and manages innovative digital solutions and services.
+								</p>
+							<!-- </img> -->
+						</article>
+						
+						<article class="currentArticle">
+							<img src="./img/article4.png" alt="">
+								<h2>referanse</h2>
+								<h1>
+								Kortere køer på Grøna Lund
+								</h1>
+								<hr class="articleHR">
+								<p>
+									Itera is a leading Scandinavian consultancy company that designs, builds and manages innovative digital solutions and services.
+								</p>
+							<!-- </img> -->
+						</article>
+
+
+					</div>
+	
+					
+					<div class="centerQuote">
+						<h2>
+						Se alle våre referanser
+						</h2>
 					</div>
 					
-					<div class="squares"></div>
-					<div class="squares"></div>
-					<div class="squares"></div>
-					<div class="squares"></div>
-					
-				</div>
+					<div id="arrowNext">
+						<img src="./img/arrowNext.png" alt="">
+					</div>
 
+				</div>
+				<!-- end center -->
+				
 			</div>
+			<!-- end wrapper -->
+
+
+		<div id="blackOverlay">
+					
+					<div class="wrapper">
+						
+						<div class="center">
+							<div class="centerQuote">
+								<img src="./img/forYou.png" alt="">
+
+
+							</div>
+							<!-- end centerQuote -->
+
+						</div>
+						<!-- end center -->
+
+					</div>
+					<!-- end wrapper -->
+
+				</div>
+				<!-- end overlay -->
+		
+
+
+		
+		<div class="wrapper">
 			
-			<div id="section3">
-				<!-- video -->
-			</div>
+			<div id="socialMediaContainer">
+				
+
+						<header id="followUs">
+							<h3>
+								Følg oss
+							</h3>
+
+							<div id="socMedLinkContainer">
+								<a href="linkedin.com/company/itera-asa">
+									<img src="./img/linkedInLogo.png" alt="" class="socMedLinkImg">
+								</a>
+
+								<a href="facebook.com/iteraction">
+									<img src="./img/facebookLogo.png" alt="" class="socMedLinkImg">
+								</a>
+									
+								<a href="twitter.com/iteraASA">
+									<img src="./img/twitterLogo.png" alt="" class="socMedLinkImg">
+								</a>
+								
+								<a href="instagram.com/itera_makeadifference">
+									<img src="./img/instagramLogo.png" alt="" class="socMedLinkImg">
+								</a>
+							</div>
+							<!-- end socMedLinkContainer -->
+							<p>
+								Itera is a leading Scandinavian consultancy company that designs, builds and manages innovative digital solutions and services. 
+							</p>
+						</header>
+				
+						<ul class="socialMediaArticles">
+							<li class="socMedArticle"><img src="./img/socMed1.png" alt="">
+									<p>										
+										<span class="greyDate">31.10.2013 </span>Seminar 
+										<a href="" class="socMedLink">@itera_makeadifference</a>
+									</p>
+									
+							</li>
+								
+							<li class="socMedArticle">
+								<p>
+									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter </a><a href="" class="twitterLink">#makeadifference</a>
+								</p>
+								
+							</li>
+							
+							<li class="socMedArticle">
+								<p>
+									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter </a><a href="" class="twitterLink">#makeadifference</a>
+								</p>
+
+							</li>
+							
+							<li class="socMedArticle">
+								<p>
+									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter </a><a href="" class="twitterLink">#makeadifference</a>
+								</p>
+
+							</li>
+							
+							<li class="socMedArticle">
+								<p>
+									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter </a><a href="" class="twitterLink">#makeadifference</a>
+								</p>
+
+							</li>
+							
+							<li class="socMedArticle">
+								<p>
+									<span class="greyDate">31.10.2013 </span>Vi har nytt format på vårt frokostseminar og kjører 5 parallelle lyntaler med sirkulering! <a href="" class="linkedLink">#makeadifference</a>
+								</p>
 
 
-			<div id="section4">
-				<div id="socialMedia">
+							</li>
+							
+							<li class="socMedArticle">
+								<p>
+									<span class="greyDate">31.10.2013 </span>Jens Hauglum fra Finn snakker om hvordan de jobber med ideer i Finn. Spennende og nyttig! <a href="" class="twitterLink">#whyideasmatter</a> <a href="" class="twitterLink">#makeadifference</a>
+								</p>
+
+							</li>
+
+							<li class="socMedArticle"><img src="./img/socMed2.png" alt="">
+									<p>
+										<span class="greyDate">31.10.2013 </span>Welcome to 
+										<a href="" class="facebookLink">@itera_makeadifference</a>, Tetiana and Yaroslava
+									</p>
+							</li>
+							
+						</ul>
 					
-				</div>
+					</div>
+				<!-- end center -->
+
 			</div>
+			<!-- end wrapper -->
+
+
+
+		</div>
+		<!-- end socialMediaContainer -->
+		
+		
+			<div id="map_canvas"></div>	
+			
+			<div id="locationsContainer">
+			
+				<div class="wrapper">
+
+					<!-- <div class="center"> -->
+
+						<ul class="locations">
+							<li class="double">
+								<h4>sweden</h4>
+								<p class="twoLocationsLeft">Itera Consulting AB<br>
+								Walingatan 20<br>
+								SE 111 24 Stockholm<br>
+								08 694 90 15<br>
+								<a href="" class="mapLink">Map</a>
+								</p>
+
+								<p class="twoLocationsRight">Itera Consulting AB<br>
+								Walingatan 20<br>
+								SE 111 24 Stockholm<br>
+								08 694 90 15<br>
+								<a href="" class="mapLink">Map</a>
+								</p>
+							</li>
+							
+							<li class="single">
+								<h4>norway</h4>
+								<p>
+									Itera ASA<br>
+									Sognsveien 77A-B<br>
+									Pb. 3834 Ullevål Stadio,<br>
+									0805 Oslo<br>
+									<a href="" class="mapLink">Map</a>
+								</p>
+							</li>
+
+							<li class="single">
+								<h4>denmark</h4>
+								<p>
+									Rentemestervej 2A<br>
+									2400 København NV<br>
+									+45 70 13 61 00<br>
+									<a href="" class="mapLink">Map</a>
+								</p>
+							</li>
+
+							<li class="double">
+								<h4>ukraine</h4>
+								<p class="twoLocationsLeft">
+								Zhylansk str. 75<br>
+								Kiev 01032<br>
+								+38 044 499 32 01<br>
+								<a href="" class="mapLink">Map</a>
+								<a href="" class="mapLink">itera.uk</a>
+								</p>
+
+								<p class="twoLocationsRight">
+								Zhylansk str. 75<br>
+								Kiev 01032<br>
+								+38 044 499 32 01<br>
+								<a href="" class="mapLink">Map</a>
+								<a href="" class="mapLink">itera.uk</a>
+								</p>
+							</li>
+						</ul>
+					
+					<!-- </div> -->
+					<!-- end center -->
+				
+				</div>
+				<!-- end wrapper -->
 		</div>
 	</div>
+	<!-- end container -->
 
 </body>
 </html>
